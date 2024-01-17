@@ -3,11 +3,12 @@ from fastai.vision.all import *
 import pathlib
 import plotly.express as px
 import platform
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
 
-#plt = platform.system()
-#if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+#temp = pathlib.PosixPath
+#pathlib.PosixPath = pathlib.WindowsPath
+
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 st.title("Weapons & Equipment")
 
